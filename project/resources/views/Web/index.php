@@ -13,7 +13,7 @@
 <!--[if IE 7]>
 <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
 <![endif]-->
-<title>易田商城首页</title>
+<title>易田商城分页</title>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
     <div class="hd_menu_list">
      <span class="wire"></span>
 		   <ul>
-		    <li><a href="#">常见问题</a></li>
+		    <li><a href="#">常见问题git 分支测试</a></li>
 			<li><a href="#">在线退换货</a></li>
 		    <li><a href="#">在线投诉</a></li>
 			<li><a href="#">配送范围</a></li>
