@@ -34,7 +34,7 @@
     <div class="hd_menu_list">
      <span class="wire"></span>
 		   <ul>
-		    <li><a href="#">常见问题git 分支测试</a></li>
+		    <li><a href="#">常见问题git分支测试</a></li>
 			<li><a href="#">在线退换货</a></li>
 		    <li><a href="#">在线投诉</a></li>
 			<li><a href="#">配送范围</a></li>
