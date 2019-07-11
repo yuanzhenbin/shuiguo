@@ -1,0 +1,45 @@
+{extend name="public/public"}
+{block name="title"}
+<title>类别修改</title>
+{/block}
+{block name="main"}
+<html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>类别修改</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="/type/{$data->id}" method="post">
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">名称</label> 
+       <div class="mws-form-item"> 
+        <input type="text" class="large" name="type_name" value="{$data->type_name}" /> 
+       </div> 
+      </div>
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">父ID</label> 
+       <div class="mws-form-item"> 
+        <input type="text" class="large" name="age" value="{$data->pid}" disabled="true"/> 
+       </div> 
+      </div>   
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">路径</label> 
+       <div class="mws-form-item"> 
+        <input type="text" class="large" name="age" value="{$data->path}" disabled="true"/> 
+       </div> 
+      </div>   
+     </div> 
+     <div class="mws-button-row">
+      <input type="hidden" name="_method" value="PUT" />
+      <input type="submit" value="提交" class="btn btn-success" /> 
+      <input type="reset" value="重置" class="btn " /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+{/block}

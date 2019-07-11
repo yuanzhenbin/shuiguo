@@ -1,0 +1,42 @@
+{extend name="public/public"}
+{block name="title"}
+<title>用户状态修改</title>
+{/block}
+{block name="main"}
+<html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>用户状态修改</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="/adminuser/{$id}" method="post">
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">用户名称</label> 
+       <div class="mws-form-item"> 
+        <input type="text" class="large" style="width: 10%;" name="username" value="{$username}" disabled="disabled" /> 
+       </div> 
+      </div> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">用户状态</label> 
+       <div class="mws-form-item"> 
+         <select name="status" style="width: 10%;">
+           <option value="1" {if $status=='1'} selected="selected" {/if}>正常状态</option>
+           <option value="0" {if $status=='0'} selected="selected" {/if}>封禁状态</option>
+         </select>
+       </div> 
+      </div>   
+     </div> 
+     <div class="mws-button-row">
+      <input type="hidden" name="_method" value="put" />
+      <input type="submit" value="修改" class="btn btn-success" /> 
+      <input type="reset" value="重置" class="btn " /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+{/block}

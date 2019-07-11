@@ -1,0 +1,38 @@
+{extend name="public/public"}
+{block name="title"}
+<title>轮播图添加</title>
+{/block}
+{block name="main"}
+<html>
+<head></head>
+<script src="/static/admins/js/libs/jquery-1.8.3.min.js"></script>
+<body>
+	<div class="mws-panel grid_8"> 
+	<div class="mws-panel-header"> 
+	<span>轮播图添加</span> 
+	</div> 
+	<form action="/carouse" method="post" enctype="multipart/form-data" onsubmit="return check()">
+	<div>
+		<input type="file" name="pic" onClick="t_file.click()" id="f_file" >
+	</div>
+	<div>
+		<button type="submit" class="btn btn-info">提交</button>
+	</div>
+	</form>
+	</div>
+</body>
+
+<script>
+	function check(){
+	var str = document.getElementById("f_file").value;
+	if(str.length==0)
+	{
+		alert("请选择图片");
+		return false;
+	}
+		return true;
+	}
+</script>
+
+</html>
+{/block}

@@ -1,0 +1,48 @@
+{extend name="public/public"}
+{block name="title"}
+<title>积分订单列表</title>
+{/block}
+{block name="main"}
+<html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>积分订单状态修改</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="/adminjifen/{$data->id}" method="post" enctype="multipart/form-data">
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">积分订单号</label> 
+       <div class="mws-form-item"> 
+        <input type="text" class="large" value="{$data->code}" disabled="disabled" /> 
+       </div> 
+      </div> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">收货人</label> 
+       <div class="mws-form-item"> 
+        <input type="text" class="large" value="{$data->user_name}" disabled="disabled" /> 
+       </div> 
+      </div>
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">发货状态</label> 
+       <div class="mws-form-item"> 
+         <select name="status" class="large">
+           <option value="0" {if $data->status == 0} selected {/if} >等待发货</option>
+           <option value="1" {if $data->status == 1} selected {/if} >已发货</option>
+         </select> 
+       </div> 
+      </div>    
+     </div> 
+     <div class="mws-button-row">
+      <input type="hidden" name="_method" value="PUT" />
+      <input type="submit" value="提交" class="btn btn-success" /> 
+      <input type="reset" value="重置" class="btn " /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+{/block}
